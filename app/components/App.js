@@ -25,8 +25,8 @@ export default class AppComponent extends React.Component {
           </nav>
         </header>
         <Switch>
+          <Route path="/" exact={true} component={Home} />
           <Route path="/profile" component={Profile} />
-          <Route path="/" component={Home} />
         </Switch>
       </Router>
     );

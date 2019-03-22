@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class ProfileComponent extends React.Component {
+export default class ProfileComponent extends React.PureComponent {
   constructor() {
     super();
 
@@ -13,19 +13,17 @@ export default class ProfileComponent extends React.Component {
     fetch("/api/profile")
       .then(res => res.json())
       .then(data => {
-        this.setState({
-          data
-        });
+        this.setState({ data });
       });
   }
 
   render() {
     return (
-      <div>
+      <>
         <h2>Profile Page</h2>
         <hr />
         <pre>{JSON.stringify(this.state.data, null, 2)}</pre>
-      </div>
+      </>
     );
   }
 }

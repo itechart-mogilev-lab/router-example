@@ -1,5 +1,4 @@
 module.exports = {
-  devtool: "source-map",
   entry: __dirname + "/app/client.js",
   output: {
     path: __dirname + "/app/public",
@@ -16,6 +15,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ["*", ".js"]
+    extensions: [".js"]
   }
 };
